@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uhlala Café | Café de especialidad y pastelería casera atendido por su dueña. Disfruta de nuestra terraza con flores, mesas blancas y una hermosa vista con atardeceres mágicos en Macul Alto.">
+    <title>Uhlala Café | Café de Especialidad, Flores & Atardeceres</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css?v=1.4">
+    
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header>
+        <div class="container header-container">
+            <a href="#inicio" class="logo-brand" id="logo-link">
+                <img src="assets/images/logo.png" alt="Uhlala! Café Logo" class="logo-img">
+                <div class="logo-text-group">
+                    <span class="logo-main">UH LALA!</span>
+                    <span class="logo-sub">Café</span>
+                </div>
+            </a>
+            
+            <nav id="main-nav">
+                <a href="#inicio" class="active">Inicio</a>
+                <a href="#filosofia">El Origen</a>
+                <a href="#momento">Tu Momento</a>
+                <a href="#menu">La Selección</a>
+                <a href="#experiencia">La Atmósfera</a>
+                <a href="#visitanos">Visítanos</a>
+            </nav>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menú de Navegación">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sun"></i> Atardeceres & Café de Especialidad
+                </div>
+                <h1 class="hero-title">
+                    Atardeceres Únicos <br>
+                    <span class="gold-text">y Café con Amor</span>
+                </h1>
+                <p class="hero-text">
+                    Bienvenido a Uhlala Café. Un refugio en la altura de Macul Alto decorado con flores y mesas blancas, donde puedes contemplar toda la ciudad. Disfruta de una taza perfecta preparada con dedicación por su propia dueña, en un ambiente acompañado de jazz suave y conexión wifi.
+                </p>
+                <div class="hero-actions">
+                    <a href="#visitanos" class="btn btn-primary">Visítanos</a>
+                    <a href="#momento" class="btn btn-secondary">Descubrir mi Taza</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-container">
+                <div class="hero-circle-backdrop"></div>
+                <div class="hero-image-wrapper">
+                    <img src="assets/images/patio_sunset.png" alt="Terraza de Uhlala Café al atardecer">
+                    <!-- Rotating Circular SVG Stamp -->
+                    <div class="floating-stamp">
+                        <svg viewBox="0 0 100 100">
+                            <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                            <text font-size="6" font-family="'Inter', sans-serif" font-weight="600" letter-spacing="0.06em">
+                            <textPath href="#circlePath">UHLALA CAFÉ • JAZZ • FLORES • ATARDECER • MOMENTO •</textPath>
+                            </text>
+                        </svg>
+                        <div class="floating-stamp-inner">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="#filosofia" class="scroll-indicator" aria-label="Desplazarse hacia abajo">
+            <span>Explorar</span>
+            <div class="scroll-indicator-mouse">
+                <div class="scroll-indicator-wheel"></div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Philosophy / About Section -->
+    <section class="about" id="filosofia">
+        <div class="container about-grid">
+            <div class="about-image-side">
+                <div class="about-image-wrapper">
+                    <img src="assets/images/cafe_facade.png" alt="Fachada de Uhlala Café con sus mesas blancas y flores">
+                    <div class="about-badge">
+                        <span>Calidez</span>
+                        Atendido por su Dueña
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-content-side">
+                <span class="section-tag">Nuestra Historia</span>
+                <h2 class="section-title">Todo Preparado en Casa</h2>
+                <p class="section-desc">
+                    En Uhlala Café, cada detalle es supervisado y elaborado por su propia dueña. Con una hospitalidad cercana y cariñosa, te recibimos en un entorno de ensueño con mesas blancas y flores en cada rincón.
+                </p>
+                <p class="section-desc" style="margin-top: -1.5rem;">
+                    Aquí, toda la pastelería y las preparaciones son hechas a mano con ingredientes seleccionados. Creemos que la combinación de un café de especialidad excelente, repostería casera y un ambiente de paz es el verdadero lujo cotidiano.
+                </p>
+                
+                <div class="about-metrics">
+                    <div class="metric-item">
+                        <span class="metric-val">100%</span>
+                        <span class="metric-lbl">Hecho con Amor</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-val">88+</span>
+                        <span class="metric-lbl">Puntaje SCA Promedio</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-val">100%</span>
+                        <span class="metric-lbl">Pastelería Casera</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Finder Widget Section -->
+    <section class="finder" id="momento">
+        <div class="container">
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <span class="section-tag">El Arte del Descubrimiento</span>
+                <h2 class="section-title">Encuentra Tu Taza Perfecta</h2>
+                <p class="section-desc">
+                    El café de especialidad es personal. Responde tres preguntas simples y te recomendaremos la taza y el método de preparación idóneos para tu estado de ánimo de hoy.
+                </p>
+            </div>
+            
+            <!-- Widget Container -->
+            <div class="finder-card" id="coffee-finder-widget">
+                <!-- Progress Indicator -->
+                <div class="finder-progress">
+                    <div class="finder-progress-bar"></div>
+                    <div class="finder-progress-fill" id="finder-progress-fill"></div>
+                    <div class="progress-node active">1</div>
+                    <div class="progress-node">2</div>
+                    <div class="progress-node">3</div>
+                    <div class="progress-node"><i class="fas fa-mug-hot"></i></div>
+                </div>
+                
+                <!-- Slide 1: Style -->
+                <div class="finder-slide active" data-question="style">
+                    <h3 class="slide-title">¿Cómo prefieres comenzar tu experiencia?</h3>
+                    <div class="option-grid">
+                        <div class="option-card" data-value="intense">
+                            <div class="option-indicator"></div>
+                            <div class="option-text">
+                                <h4>Intenso y Directo</h4>
+                                <p>Un golpe de sabor concentrado, con cuerpo robusto y un final seductor en el paladar.</p>
+                            </div>
+                        </div>
+                        <div class="option-card" data-value="silky">
+                            <div class="option-indicator"></div>
+                            <div class="option-text">
+                                <h4>Sedoso y Equilibrado</h4>
+                                <p>Armonía láctea emulsionada a la perfección para suavizar la potencia aromática.</p>
+                            </div>
+                        </div>
+                        <div class="option-card" data-value="aromatic">
+                            <div class="option-indicator"></div>
+                            <div class="option-text">
+                                <h4>Complejo y Aromático</h4>
+                                <p>Cuerpo liviano tipo té, con una explosión de aromas florales y frutales para degustar lentamente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2: Flavor Profile -->
+                <div class="finder-slide" data-question="profile">
+                    <h3 class="slide-title">¿Qué perfil organoléptico te atrae más?</h3>
+                    <div class="option-grid">
+                        <div class="option-card" data-value="sweet">
+                            <div class="option-indicator"></div>
+                            <div class="option-text">
+                                <h4>Dulce y Reconfortante</h4>
+                                <p>Notas que recuerdan al cacao belga refinado, caramelo de mantequilla y avellanas tostadas.</p>
+                            </div>
+                        </div>
+                        <div class="option-card" data-value="floral">
+                            <div class="option-indicator"></div>
+                            <div class="option-text">
+                                <h4>Floral e Intrincado</h4>
+                                <p>Destellos sutiles de jazmín blanco, flor de azahar y notas cítricas limpias.</p>
+                            </div>
+                        </div>
+                        <div class="option-card" data-value="complex">
+                            <div class="option-indicator"></div>
+                            <div class="option-text">
+                                <h4>Exótico y Licoroso</h4>
+                                <p>Notas especiadas, cuerpo denso con matices que recuerdan a frutas fermentadas y ron añejo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3: Time/Vibe -->
+                <div class="finder-slide" data-question="time">
+                    <h3 class="slide-title">¿Cuál es tu momento de consumo ideal?</h3>
+                    <div class="option-grid">
+                        <div class="option-card" data-value="morning">
+                            <div class="option-indicator"></div>
+                            <div class="option-text">
+                                <h4>El Despertar de los Sentidos (Mañana)</h4>
+                                <p>Necesitas claridad y enfoque de alto nivel para comenzar el día con determinación.</p>
+                            </div>
+                        </div>
+                        <div class="option-card" data-value="afternoon">
+                            <div class="option-indicator"></div>
+                            <div class="option-text">
+                                <h4>Una Pausa Reflexiva (Media Tarde)</h4>
+                                <p>Un respiro refinado entre reuniones de negocios para resetear la mente.</p>
+                            </div>
+                        </div>
+                        <div class="option-card" data-value="night">
+                            <div class="option-indicator"></div>
+                            <div class="option-text">
+                                <h4>Un Cierre de Alta Gastronomía (Noche)</h4>
+                                <p>El broche de oro sublime tras una cena sofisticada, perfecto para conversar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4: Result -->
+                <div class="finder-slide" data-question="result">
+                    <div class="result-container">
+                        <span class="result-badge">Tu Taza Recomendada</span>
+                        <h3 class="result-coffee-title" id="res-coffee-name">Panamá Geisha V60</h3>
+                        <p class="result-coffee-desc" id="res-coffee-desc">
+                            Cuerpo etéreo, notas florales de jazmín y acidez brillante que redefine lo que puede ser un café.
+                        </p>
+                        
+                        <div class="result-specs">
+                            <div class="spec-item">
+                                <div class="spec-lbl">Método</div>
+                                <div class="spec-val" id="res-val-method">Pour-over V60</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-lbl">Origen</div>
+                                <div class="spec-val" id="res-val-origin">Boquete, Panamá</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-lbl">Descriptores</div>
+                                <div class="spec-val" id="res-val-notes">Jazmín, Durazno, Té Negro</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-lbl">Puntuación</div>
+                                <div class="spec-val" style="color: var(--gold-primary);" id="res-val-sca">91.5 SCA</div>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: center; gap: 1rem;">
+                            <button class="btn btn-primary" id="finder-book-result">Probar en Salón</button>
+                            <button class="btn btn-secondary" id="finder-restart" style="margin-left: 0;">Reiniciar Test</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Actions for Widget -->
+                <div class="finder-actions">
+                    <button class="btn btn-secondary btn-nav" id="finder-prev" style="margin-left: 0;">Atrás</button>
+                    <button class="btn btn-primary btn-nav" id="finder-next" disabled>Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <span class="section-tag">La Selección Exclusiva</span>
+                <h2 class="section-title">La Carta de Uhlala</h2>
+                <p class="section-desc">
+                    Una oferta culinaria de autor meticulosamente balanceada para maridar con nuestros cafés de alta puntuación.
+                </p>
+            </div>
+            
+            <!-- Category Tabs -->
+            <div class="menu-tabs">
+                <button class="menu-tab-btn active" data-tab="coffee">Cafés de Autor</button>
+                <button class="menu-tab-btn" data-tab="pastry">Pastelería de Alta Gama</button>
+                <button class="menu-tab-btn" data-tab="brunch">Brunch Signature</button>
+            </div>
+            
+            <!-- Coffees Grid -->
+            <div class="menu-grid active" id="menu-coffee">
+                <!-- Item 1 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Panamá Geisha Reserve</h4>
+                            <span class="menu-item-price">$8.500</span>
+                        </div>
+                        <p class="menu-item-desc">Extracción por goteo V60 de nuestro lote premium. Notas florales muy complejas, cuerpo de té de jazmín y toques a durazno blanco silvestre.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Micro-lote</span>
+                            <span class="menu-tag">Filtrado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Flat White Velvet</h4>
+                            <span class="menu-item-price">$4.200</span>
+                        </div>
+                        <p class="menu-item-desc">Doble shot de espresso de la casa emulsionado con microespuma de leche sedosa a temperatura precisa. Textura aterciopelada y dulce.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Espresso</span>
+                            <span class="menu-tag">Leche de Especialidad</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Pistachio Rose Affogato</h4>
+                            <span class="menu-item-price">$5.900</span>
+                        </div>
+                        <p class="menu-item-desc">Helado artesanal premium de pistacho de Sicilia ahogado con un shot de espresso Uhlala Blend y pétalos de rosa deshidratados comestibles.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Exclusivo</span>
+                            <span class="menu-tag">Frío</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Nitro Espresso Tonic</h4>
+                            <span class="menu-item-price">$5.500</span>
+                        </div>
+                        <p class="menu-item-desc">Espresso nitrogenado servido sobre agua tónica premium, rodaja de pomelo deshidratado y un toque aromático de romero fresco.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Refrescante</span>
+                            <span class="menu-tag">De Autor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pastry Grid -->
+            <div class="menu-grid" id="menu-pastry">
+                <!-- Item 1 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Croissant de Rosa & Almendras</h4>
+                            <span class="menu-item-price">$5.200</span>
+                        </div>
+                        <p class="menu-item-desc">Croissant artesanal de masa madre de doble fermentación, relleno de crema de almendras y decorado con pétalos de rosa orgánicos.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Masa Madre</span>
+                            <span class="menu-tag">Pâtisserie</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Eclair de Chocolate Belga & Sal de Cahuil</h4>
+                            <span class="menu-item-price">$4.800</span>
+                        </div>
+                        <p class="menu-item-desc">Pasta choux rellena de ganache sedosa de chocolate belga al 70% de cacao, terminada con cristales de sal marina de Cahuil.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Ganache</span>
+                            <span class="menu-tag">Francés</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Tarta de Pistacho e Higo Estacional</h4>
+                            <span class="menu-item-price">$6.400</span>
+                        </div>
+                        <p class="menu-item-desc">Base sablé de vainilla de Madagascar rellena con crema de pistacho tostado e higos frescos, con un toque de miel orgánica.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Gourmet</span>
+                            <span class="menu-tag">De Temporada</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Macarons Colección de Oro</h4>
+                            <span class="menu-item-price">$7.200</span>
+                        </div>
+                        <p class="menu-item-desc">Caja de 4 macarons de sabores exclusivos: Vainilla Bourbon, Frambuesa Balsámica, Trufa de Espresso y Lavanda con Miel, con láminas de oro.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Laminado en Oro</span>
+                            <span class="menu-tag">Colección</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Brunch Grid -->
+            <div class="menu-grid" id="menu-brunch">
+                <!-- Item 1 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Avocado Toast Imperial</h4>
+                            <span class="menu-item-price">$12.500</span>
+                        </div>
+                        <p class="menu-item-desc">Pan de masa madre de centeno, palta laminada en abanico, salmón ahumado escocés curado en casa, huevo pochado de campo con láminas de oro de 24k.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Firma</span>
+                            <span class="menu-tag">Salmón Premium</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Huevos Benedictinos de Trufa</h4>
+                            <span class="menu-item-price">$11.800</span>
+                        </div>
+                        <p class="menu-item-desc">Dos huevos de campo pochados sobre muffins ingleses y jamón serrano premium, bañados en salsa holandesa infusionada con trufa negra.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Caliente</span>
+                            <span class="menu-tag">Trufa Negra</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Brioche Pain Perdu</h4>
+                            <span class="menu-item-price">$9.500</span>
+                        </div>
+                        <p class="menu-item-desc">Tostada francesa gruesa de pan brioche de mantequilla, caramelizada con azúcar de caña orgánica, servida con frutos rojos, crema mascarpone y jarabe de arce puro.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Dulce</span>
+                            <span class="menu-tag">Favorito</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item-card">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-name">Bagel de Roast Beef & Gruyere</h4>
+                            <span class="menu-item-price">$13.200</span>
+                        </div>
+                        <p class="menu-item-desc">Bagel artesanal con semillas, roast beef de res Angus cortado fino, queso Gruyere fundido, rúcula selvática y mayonesa trufada casera.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Premium Angus</span>
+                            <span class="menu-tag">Salado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Atmosphere Banner Section -->
+    <section class="atmosphere" id="experiencia">
+        <div class="atmosphere-bg">
+            <img src="assets/images/rose_bench.png" alt="Rincón romántico de flores y luces en Uhlala Café">
+        </div>
+        <div class="atmosphere-overlay"></div>
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="atmosphere-content">
+                <span class="section-tag" style="color: var(--gold-light);">Nuestra Atmósfera</span>
+                <h2 class="atmosphere-title">Jazz, Flores & Conexión</h2>
+                <p class="atmosphere-text">
+                    Rodeado de flores frescas en todos los bordes y bajo la suave melodía del jazz, nuestro espacio ofrece el equilibrio perfecto entre calidez y modernidad. Ya sea para trabajar con nuestro wifi de alta velocidad o contemplar el atardecer sobre la ciudad, aquí el tiempo se detiene.
+                </p>
+                <div class="atmosphere-features">
+                    <div class="feat-item">
+                        <i class="fas fa-wifi"></i>
+                        <span>Wifi Liberado</span>
+                    </div>
+                    <div class="feat-item">
+                        <i class="fas fa-music"></i>
+                        <span>Música Jazz Suave</span>
+                    </div>
+                    <div class="feat-item">
+                        <i class="fas fa-seedling"></i>
+                        <span>Rincones Florales</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Us (Visítanos) Section -->
+    <section class="visitanos" id="visitanos">
+        <div class="container visitanos-grid">
+            <!-- Left Info column -->
+            <div class="visitanos-info">
+                <span class="section-tag">Atención Presencial</span>
+                <h2 class="section-title">Visítanos</h2>
+                <p class="section-desc" style="margin-bottom: 2rem;">
+                    En Uhlala Café no realizamos reservas previas. Con el fin de preservar el dinamismo de nuestra barra y brindar una experiencia justa, exclusiva y espontánea para cada uno de nuestros selectos clientes, atendemos únicamente por <strong>orden de llegada</strong>.
+                </p>
+                
+                <div class="reservation-hours">
+                    <h3 class="hours-title">Horarios de Apertura</h3>
+                    <div class="hours-row">
+                        <span>Lunes a Sábado</span>
+                        <span>10:00 - 21:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Domingo</span>
+                        <span>Cerrado</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Map / Info Card Column -->
+            <div class="visitanos-card-container">
+                <div class="contact-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem; font-size: 2rem; color: var(--color-rose-accent);">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="contact-card-title" style="text-align: center; margin-bottom: 1rem;">Nuestra Ubicación</h3>
+                    <p class="section-desc" style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light); font-weight: 400;">
+                        Av. Macul Alto 6204<br>
+                        Comuna de La Florida, Santiago
+                    </p>
+                    
+                    <a href="https://www.google.com/maps/place/Uh+lala!+Cafe/@-33.5130217,-70.5317509,20.25z/data=!4m15!1m8!3m7!1s0x9662d17f59d7592f:0x9ac3cf7b758bf57b!2sAlto+-+Av.+Macul+Alto+6204,+8280531+La+Florida,+Regi%C3%B3n+Metropolitana!3b1!8m2!3d-33.5130477!4d-70.5316836!16s%2Fg%2F11knfyxgwc!3m5!1s0x9662d1392a177405:0x9e4059b6aa6691b2!8m2!3d-33.5130854!4d-70.5317263!16s%2Fg%2F11lz4wtq9z?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="contact-link" style="justify-content: center; background: rgba(229, 168, 160, 0.1); padding: 0.8rem; border-radius: 4px; border: 1px solid var(--gold-primary); margin-bottom: 1rem;">
+                        <i class="fas fa-directions" style="color: var(--gold-light);"></i>
+                        <span style="color: var(--text-light); font-weight: 500;">Cómo Llegar (Google Maps)</span>
+                    </a>
+                    
+                    <a href="https://wa.me/56999998888" target="_blank" rel="noopener" class="contact-link" style="justify-content: center;">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Consultar Aforo en Tiempo Real</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <span class="section-tag">Crítica & Comunidad</span>
+                <h2 class="section-title">El Círculo de Uhlala</h2>
+                <p class="section-desc">
+                    La opinión de quienes aprecian la consistencia y la elegancia en cada taza.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Review 1 -->
+                <div class="testimonial-card">
+                    <span class="quote-icon">“</span>
+                    <p class="testimonial-quote">
+                        La atención personalizada de su dueña marca la diferencia. Tomar un Geisha delicioso mientras contemplas el atardecer sobre Santiago desde la terraza de mesas blancas es inigualable.
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Claudio Valenzuela</span>
+                        <span class="author-title">Editor, Crónica Gastronómica</span>
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="testimonial-card">
+                    <span class="quote-icon">“</span>
+                    <p class="testimonial-quote">
+                        El patio rodeado de flores y mesas blancas es un verdadero oasis. Vengo a trabajar con el wifi al ritmo de jazz suave, la desconexión es total y toda la pastelería es exquisita.
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Isabel Montes</span>
+                        <span class="author-title">Directora Asociada, MH Private Capital</span>
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="testimonial-card">
+                    <span class="quote-icon">“</span>
+                    <p class="testimonial-quote">
+                        Cada visita es única. Ver el atardecer desde la altura de Macul Alto con un café de especialidad y algo dulce preparado con tanto cariño por la dueña es mi momento favorito de la semana.
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Bastián Rojas</span>
+                        <span class="author-title">Fundador de TechCorp Chile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="#inicio" class="logo-brand">
+                        <img src="assets/images/logo.png" alt="Uhlala! Café Logo" class="logo-img">
+                        <div class="logo-text-group">
+                            <span class="logo-main">UH LALA!</span>
+                            <span class="logo-sub">Café</span>
+                        </div>
+                    </a>
+                    <p>
+                        Elevando el consumo de café a una experiencia ceremonial inigualable para la alta sociedad e influyentes del país.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-col-title">Explorar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#filosofia">El Origen</a></li>
+                        <li><a href="#momento">Encuentra Tu Taza</a></li>
+                        <li><a href="#menu">Nuestra Carta</a></li>
+                        <li><a href="#experiencia">Atmósfera</a></li>
+                        <li><a href="#visitanos">Visítanos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-col-title">Dirección</h4>
+                    <div class="footer-locations">
+                        <div class="loc-item">
+                            <span class="loc-name">La Florida Casa Matriz</span>
+                            <span class="loc-addr"><i class="fas fa-map-marker-alt" style="color: var(--gold-primary); margin-right: 0.5rem;"></i> Av. Macul Alto 6204, La Florida</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <span>&copy; 2026 Uhlala Café de Especialidad. Todos los derechos reservados.</span>
+                <span>Diseño y Desarrollo de Alta Gama</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Bottom Mobile Navigation Bar -->
+    <div class="mobile-bottom-nav">
+        <a href="#inicio" class="mobile-nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="#momento" class="mobile-nav-item">
+            <i class="fas fa-magic"></i>
+            <span>Tu Momento</span>
+        </a>
+        <a href="#menu" class="mobile-nav-item">
+            <i class="fas fa-book-open"></i>
+            <span>La Carta</span>
+        </a>
+        <a href="#visitanos" class="mobile-nav-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Visítanos</span>
+        </a>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
