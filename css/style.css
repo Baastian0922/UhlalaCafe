@@ -9,25 +9,32 @@
     --bg-dark: #090807;
     --bg-espresso: #16120f;
     --bg-card: rgba(26, 22, 19, 0.65);
-    
+
     /* Logo Brand Colors: Rose-Gold & Platinum (Gold completely removed) */
-    --gold-primary: #e5a8a0; /* Logo's rose-gold accent */
-    --gold-light: #f5f5f7; /* Premium light platinum */
-    --gold-dark: #b87870; /* Muted rose shadow */
-    
-    --color-rose: #fadcd8; /* Logo pastel pink background */
-    --color-rose-gold: #e5a8a0; /* Logo rose gold */
-    --color-rose-accent: #e28a7e; /* Readable deep rose accent */
-    
+    --gold-primary: #e5a8a0;
+    /* Logo's rose-gold accent */
+    --gold-light: #f5f5f7;
+    /* Premium light platinum */
+    --gold-dark: #b87870;
+    /* Muted rose shadow */
+
+    --color-rose: #fadcd8;
+    /* Logo pastel pink background */
+    --color-rose-gold: #e5a8a0;
+    /* Logo rose gold */
+    --color-rose-accent: #e28a7e;
+    /* Readable deep rose accent */
+
     /* Modern blended gradients (Platinum + Rose-Gold) */
     --gold-gradient: linear-gradient(135deg, #f5f5f7 0%, #e5a8a0 50%, #fadcd8 100%);
     --rose-gradient: linear-gradient(135deg, #fadcd8 0%, #e28a7e 50%, #b87870 100%);
-    
+
     --text-light: #f7f4eb;
     --text-muted: #aba298;
     --text-dark: #201a15;
     --border-color: rgba(229, 168, 160, 0.25);
-    --border-hover: rgba(245, 245, 247, 0.45); /* Premium platinum border hover */
+    --border-hover: rgba(245, 245, 247, 0.45);
+    /* Premium platinum border hover */
     --font-serif: 'Playfair Display', Georgia, serif;
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -35,7 +42,9 @@
 }
 
 /* Base Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -59,20 +68,26 @@ body {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg-dark);
 }
+
 ::-webkit-scrollbar-thumb {
     background: #2d2620;
     border-radius: 4px;
     border: 2px solid var(--bg-dark);
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--gold-primary);
 }
 
 /* Typography & Layout */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-serif);
     font-weight: 600;
     letter-spacing: 0.02em;
@@ -177,7 +192,8 @@ header.scrolled .header-container {
     border: 1px solid var(--gold-primary);
     object-fit: cover;
     box-shadow: 0 0 10px rgba(240, 171, 162, 0.15);
-    background-color: #fadcd8; /* Pastel blush pink background matching the logo */
+    background-color: #fadcd8;
+    /* Pastel blush pink background matching the logo */
     transition: var(--transition-smooth);
 }
 
@@ -229,7 +245,8 @@ nav a {
     padding: 0.5rem 0;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     color: var(--text-light);
 }
 
@@ -245,7 +262,8 @@ nav a::after {
     transform: translateX(-50%);
 }
 
-nav a:hover::after, nav a.active::after {
+nav a:hover::after,
+nav a.active::after {
     width: 100%;
 }
 
@@ -448,7 +466,8 @@ nav a:hover::after, nav a.active::after {
     overflow: hidden;
     border: 1px solid var(--border-color);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 500px;
     transition: var(--transition-smooth);
 }
@@ -589,7 +608,7 @@ nav a:hover::after, nav a.active::after {
     background: var(--gold-gradient);
     color: var(--bg-dark);
     padding: 1.5rem 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     font-family: var(--font-serif);
     font-size: 1.3rem;
     font-weight: 600;
@@ -874,7 +893,7 @@ nav a:hover::after, nav a.active::after {
     justify-content: center;
     gap: 3rem;
     margin-bottom: 2.5rem;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     padding: 1.5rem;
     border-radius: 4px;
     border: 1px solid rgba(240, 171, 162, 0.05);
@@ -1389,19 +1408,45 @@ footer {
 
 /* Animations */
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.7; }
-    100% { transform: scale(1.08); opacity: 1; }
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
 }
 
 @keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes scroll-wheel {
-    0% { top: 6px; opacity: 1; height: 8px; }
-    50% { top: 15px; opacity: 0.5; height: 4px; }
-    100% { top: 6px; opacity: 0; height: 8px; }
+    0% {
+        top: 6px;
+        opacity: 1;
+        height: 8px;
+    }
+
+    50% {
+        top: 15px;
+        opacity: 0.5;
+        height: 4px;
+    }
+
+    100% {
+        top: 6px;
+        opacity: 0;
+        height: 8px;
+    }
 }
 
 @keyframes fade-in-slide {
@@ -1409,6 +1454,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1420,6 +1466,7 @@ footer {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1427,8 +1474,15 @@ footer {
 }
 
 @keyframes scale-up-bounce {
-    0% { transform: scale(0); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Base Mobile Bottom Nav state (hidden on larger screens) */
@@ -1438,47 +1492,67 @@ footer {
 
 /* Responsive Breakpoints */
 @media (max-width: 1024px) {
+    nav {
+        gap: 1.2rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
     .hero-title {
         font-size: 3.5rem;
     }
+
     .hero-image-wrapper {
-        width: 320px;
+        width: 100%;
+        max-width: 320px;
         height: 400px;
     }
+
     .floating-stamp {
         width: 110px;
         height: 110px;
         left: -30px;
         bottom: 30px;
     }
+
     .floating-stamp svg {
         width: 85px;
         height: 85px;
     }
-    .about-grid, .visitanos-grid {
+
+    .about-grid,
+    .visitanos-grid {
         gap: 3rem;
     }
+
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .testimonials-grid .testimonial-card:last-child {
         grid-column: span 2;
     }
 }
 
 @media (max-width: 768px) {
+    .section-title {
+        font-size: 2.25rem;
+    }
+
     section {
         padding: 5rem 0;
     }
-    
+
     header {
         padding: 0.5rem 0;
     }
-    
+
     .menu-toggle {
         display: block;
     }
-    
+
     nav {
         position: fixed;
         top: 0;
@@ -1497,15 +1571,15 @@ footer {
         padding: 2rem;
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
     }
-    
+
     nav.active {
         right: 0;
     }
-    
+
     .header-cta {
-        display: none; /* Can move to mobile nav */
+        display: none;
     }
-    
+
     .header-cta.in-nav {
         display: inline-block;
         margin-top: 1rem;
@@ -1517,96 +1591,97 @@ footer {
         text-align: center;
         padding-top: 4rem;
     }
-    
+
     .hero-badge {
         margin: 0 auto 1.5rem;
     }
-    
+
     .hero-title {
         font-size: 3rem;
     }
-    
+
     .hero-text {
         margin: 0 auto 2.5rem;
     }
-    
+
     .hero-actions {
         justify-content: center;
     }
-    
+
     .hero-image-container {
         grid-row: 1;
         margin-bottom: 2rem;
     }
-    
+
     .hero-image-wrapper {
-        width: 280px;
+        width: 100%;
+        max-width: 280px;
         height: 350px;
     }
-    
+
     .about-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    
+
     .about-image-side {
         max-width: 450px;
         margin: 0 auto;
         width: 100%;
     }
-    
+
     .about-metrics {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         text-align: center;
     }
-    
+
     .metric-item {
         align-items: center;
     }
-    
+
     .menu-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     .atmosphere {
         height: auto;
         padding: 6rem 0;
     }
-    
+
     .atmosphere-features {
         flex-direction: column;
         gap: 1.5rem;
         align-items: center;
     }
-    
+
     .visitanos-grid {
         grid-template-columns: 1fr;
         gap: 4rem;
     }
-    
+
     .reservation-hours {
         max-width: 100%;
     }
-    
+
     .contact-card {
         max-width: 100%;
     }
-    
+
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .testimonials-grid .testimonial-card:last-child {
         grid-column: span 1;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         gap: 1rem;
@@ -1634,7 +1709,7 @@ footer {
         padding: 0 1rem;
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
-    
+
     .mobile-nav-item {
         display: flex;
         flex-direction: column;
@@ -1651,16 +1726,17 @@ footer {
         transition: var(--transition-smooth);
         width: 60px;
     }
-    
+
     .mobile-nav-item i {
         font-size: 1.1rem;
         transition: var(--transition-smooth);
     }
-    
-    .mobile-nav-item:hover, .mobile-nav-item.active {
+
+    .mobile-nav-item:hover,
+    .mobile-nav-item.active {
         color: var(--gold-light);
     }
-    
+
     .mobile-nav-item.active i {
         color: var(--gold-primary);
         transform: translateY(-2px);
@@ -1682,7 +1758,7 @@ footer {
         border-radius: 4px;
         border: 1px solid rgba(255, 255, 255, 0.03);
     }
-    
+
     .menu-tab-btn {
         padding: 0.7rem 0.5rem;
         font-size: 0.75rem;
@@ -1702,15 +1778,15 @@ footer {
         padding: 1.5rem;
         gap: 1rem;
     }
-    
+
     .menu-item-name {
         font-size: 1.15rem;
     }
-    
+
     .menu-item-price {
         font-size: 1.1rem;
     }
-    
+
     .menu-item-desc {
         font-size: 0.85rem;
     }
@@ -1719,7 +1795,7 @@ footer {
     .finder-card {
         padding: 1.5rem;
     }
-    
+
     .slide-title {
         font-size: 1.35rem;
         margin-bottom: 1.5rem;
@@ -1729,27 +1805,27 @@ footer {
         padding: 1.1rem 1.3rem;
         gap: 1rem;
     }
-    
+
     .option-text h4 {
         font-size: 0.95rem;
     }
-    
+
     .option-text p {
         font-size: 0.8rem;
         line-height: 1.4;
     }
-    
+
     .result-coffee-title {
         font-size: 1.8rem;
     }
-    
+
     .result-specs {
         flex-direction: column;
         gap: 0.8rem;
         padding: 1rem;
         text-align: left;
     }
-    
+
     .spec-item {
         display: flex;
         justify-content: space-between;
@@ -1757,12 +1833,12 @@ footer {
         border-bottom: 1px dashed rgba(240, 171, 162, 0.1);
         padding-bottom: 0.4rem;
     }
-    
+
     .spec-item:last-child {
         border-bottom: none;
         padding-bottom: 0;
     }
-    
+
     .spec-lbl {
         margin-bottom: 0;
     }
@@ -1774,6 +1850,10 @@ footer {
 
 /* Extra Small Screens (Phones under 480px) */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     .menu-item-header {
         flex-direction: column;
         align-items: flex-start;
@@ -1781,7 +1861,7 @@ footer {
         border-bottom: none;
         padding-bottom: 0;
     }
-    
+
     .menu-item-price {
         padding-left: 0;
         margin-top: 0.2rem;
@@ -1798,6 +1878,23 @@ footer {
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .btn-secondary {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    .btn-primary {
+        width: 100%;
     }
 
     .finder-progress {
