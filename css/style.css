@@ -1631,13 +1631,25 @@ footer {
     }
 
     .about-metrics {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
         text-align: center;
     }
 
     .metric-item {
         align-items: center;
+    }
+
+    .metric-val {
+        font-size: 1.8rem;
+    }
+
+    .metric-lbl {
+        font-size: 0.7rem;
+        letter-spacing: 0.02em;
     }
 
     .menu-grid {
@@ -1693,9 +1705,10 @@ footer {
         display: flex;
         position: fixed;
         bottom: 1.5rem;
-        left: 5%;
-        right: 5%;
-        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 2rem);
+        max-width: 500px;
         height: 65px;
         background: rgba(22, 18, 15, 0.85);
         backdrop-filter: blur(20px);
@@ -1706,7 +1719,7 @@ footer {
         justify-content: space-around;
         align-items: center;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(240, 171, 162, 0.1);
-        padding: 0 1rem;
+        padding: 0 0.5rem;
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
@@ -1718,13 +1731,23 @@ footer {
         color: var(--text-muted);
         text-decoration: none;
         font-family: var(--font-sans);
-        font-size: 0.65rem;
+        font-size: 0.6rem;
         font-weight: 500;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.02em;
         gap: 0.25rem;
         transition: var(--transition-smooth);
-        width: 60px;
+        flex: 1;
+        text-align: center;
+        min-width: 0;
+    }
+
+    .mobile-nav-item span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        max-width: 100%;
     }
 
     .mobile-nav-item i {
