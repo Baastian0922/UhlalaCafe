@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Proyecto — Uhlala Café</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f9f5f2;
+            color: #2d1f14;
+            padding: 2.5rem;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        /* ── Header ── */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: linear-gradient(135deg, #2d1f14 0%, #3d2a1a 100%);
+            color: #f7f4eb;
+            padding: 2rem 2.5rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+        .header img {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: contain;
+            background: #fadcd8;
+            padding: 6px;
+            border: 2px solid #e5a8a0;
+        }
+        .header h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.9rem;
+            line-height: 1.2;
+        }
+        .header p {
+            font-size: 0.9rem;
+            color: #e5a8a0;
+            margin-top: 0.3rem;
+        }
+        .badge {
+            margin-left: auto;
+            background: #e5a8a0;
+            color: #2d1f14;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        /* ── Intro ── */
+        .intro {
+            background: #fff;
+            border-left: 4px solid #e5a8a0;
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.92rem;
+            color: #5a3e2b;
+            line-height: 1.7;
+        }
+
+        /* ── Section titles ── */
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.3rem;
+            color: #2d1f14;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5a8a0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* ── Table ── */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-bottom: 1.5rem;
+        }
+        thead tr {
+            background: linear-gradient(135deg, #3d2a1a, #5a3e2b);
+            color: #fadcd8;
+        }
+        thead th {
+            padding: 0.85rem 1.2rem;
+            text-align: left;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+        tbody tr {
+            border-bottom: 1px solid #f0e8e0;
+            transition: background 0.2s;
+        }
+        tbody tr:last-child { border-bottom: none; }
+        tbody tr:nth-child(even) { background: #fdf8f5; }
+        td {
+            padding: 0.85rem 1.2rem;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            vertical-align: top;
+        }
+        td:first-child {
+            font-family: 'Courier New', monospace;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #b87870;
+            white-space: nowrap;
+            width: 30%;
+        }
+
+        /* ── Architecture box ── */
+        .architecture {
+            background: #2d1f14;
+            color: #f0e8dc;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.82rem;
+            line-height: 1.85;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+        .architecture .dir  { color: #e5a8a0; font-weight: bold; }
+        .architecture .file { color: #f7f4eb; }
+        .architecture .note { color: #8a7060; }
+
+        /* ── Three layers ── */
+        .layers {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .layer-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+            border-top: 3px solid #e5a8a0;
+        }
+        .layer-card .emoji { font-size: 1.8rem; display: block; margin-bottom: 0.5rem; }
+        .layer-card h3 { font-size: 0.85rem; font-weight: 700; color: #3d2a1a; margin-bottom: 0.3rem; }
+        .layer-card p  { font-size: 0.75rem; color: #7a5a40; line-height: 1.5; }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5d5c8;
+            font-size: 0.8rem;
+            color: #a08060;
+        }
+        .footer strong { color: #3d2a1a; }
+
+        /* ── Print styles ── */
+        @media print {
+            body { background: #fff; padding: 0; }
+            .no-print { display: none; }
+            .layers { grid-template-columns: repeat(4, 1fr); }
+            table { box-shadow: none; border: 1px solid #e0d0c0; }
+            h2 { break-before: auto; }
+        }
+
+        /* ── Print button ── */
+        .print-btn {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1.5rem;
+        }
+        .print-btn button {
+            background: linear-gradient(135deg, #e5a8a0, #fadcd8);
+            color: #2d1f14;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(229,168,160,0.3);
+        }
+        .print-btn button:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <!-- Print Button -->
+    <div class="print-btn no-print">
+        <button onclick="window.print()">🖨️ Guardar como PDF</button>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <img src="assets/images/logo.png" alt="Uhlala Café Logo">
+        <div>
+            <h1>Guía del Proyecto</h1>
+            <p>Uhlala Café · Landing Page Premium · v1.2.0</p>
+        </div>
+        <span class="badge">Fullstack Guide</span>
+    </div>
+
+    <!-- Intro -->
+    <p class="intro">
+        Este documento explica la estructura y el propósito de cada archivo y carpeta del repositorio
+        <strong>UhlalaCafe</strong>. Está diseñado para que cualquier desarrollador pueda entender el proyecto
+        de forma rápida y clara, sin necesidad de revisar el código fuente.
+    </p>
+
+    <!-- Architecture -->
+    <h2>📁 Árbol del Proyecto</h2>
+    <div class="architecture">
+<span class="dir">UhlalaCafe/</span>
+├── <span class="dir">.github/</span>
+│   ├── <span class="dir">ISSUE_TEMPLATE/</span>
+│   │   ├── <span class="file">bug_report.md</span>          <span class="note">← Formulario para reportar errores</span>
+│   │   └── <span class="file">feature_request.md</span>     <span class="note">← Formulario para pedir funciones</span>
+│   └── <span class="dir">workflows/</span>
+│       └── <span class="file">deploy.yml</span>             <span class="note">← Pipeline CI/CD → auto-deploy a GitHub Pages</span>
+│
+├── <span class="dir">assets/</span>
+│   └── <span class="dir">images/</span>
+│       ├── <span class="file">logo.png</span>               <span class="note">← Logo oficial</span>
+│       ├── <span class="file">patio_sunset.png</span>       <span class="note">← Foto Hero: terraza al atardecer</span>
+│       ├── <span class="file">cafe_facade.png</span>        <span class="note">← Foto Historia: fachada + dueña</span>
+│       └── <span class="file">rose_bench.png</span>         <span class="note">← Foto Atmósfera: rincón de flores</span>
+│
+├── <span class="dir">css/</span>
+│   └── <span class="file">style.css</span>                  <span class="note">← Diseño visual completo (1900+ líneas)</span>
+│
+├── <span class="dir">js/</span>
+│   └── <span class="file">main.js</span>                    <span class="note">← Lógica interactiva (scroll, menú, widget)</span>
+│
+├── <span class="file">.editorconfig</span>                  <span class="note">← Estilo de código consistente entre editores</span>
+├── <span class="file">.gitignore</span>                     <span class="note">← Archivos que Git debe ignorar</span>
+├── <span class="file">CHANGELOG.md</span>                   <span class="note">← Historial de versiones (semver)</span>
+├── <span class="file">index.html</span>                     <span class="note">← Punto de entrada del sitio web</span>
+├── <span class="file">LICENSE</span>                        <span class="note">← Licencia MIT</span>
+├── <span class="file">package.json</span>                   <span class="note">← Metadatos y scripts npm del proyecto</span>
+└── <span class="file">README.md</span>                      <span class="note">← Documentación principal del repositorio</span>
+    </div>
+
+    <!-- Folders table -->
+    <h2>📂 Carpetas — Para qué sirve cada una</h2>
+    <table>
+        <thead>
+            <tr><th>Carpeta</th><th>Descripción</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>assets/images/</td>
+                <td>Guarda todas las <strong>fotografías e imágenes</strong> del sitio: el logo oficial, las fotos reales de la terraza al atardecer, la fachada con la dueña y el rincón de flores. Todo lo visual que no es código va aquí.</td>
+            </tr>
+            <tr>
+                <td>css/</td>
+                <td>Contiene <code>style.css</code> — todo lo que define <strong>cómo se ve</strong> el sitio: la paleta rose-gold/platinum, tipografías, tamaños, animaciones, glassmorphism y el diseño responsivo para móviles, tablets y escritorio.</td>
+            </tr>
+            <tr>
+                <td>js/</td>
+                <td>Contiene <code>main.js</code> — toda la <strong>lógica interactiva</strong>: el menú hamburguesa, el widget "Descubrir mi Taza", las pestañas de La Carta y el scroll-spy que resalta el ítem activo en la navegación.</td>
+            </tr>
+            <tr>
+                <td>.github/</td>
+                <td>Configuración especial que lee GitHub: el <strong>pipeline CI/CD</strong> que despliega el sitio automáticamente a GitHub Pages con cada push, y los formularios estructurados para reportar bugs o pedir funciones.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Files table -->
+    <h2>📄 Archivos — Para qué sirve cada uno</h2>
+    <table>
+        <thead>
+            <tr><th>Archivo</th><th>Descripción</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>index.html</td>
+                <td>El <strong>archivo principal del sitio web</strong>. Contiene toda la estructura visible: el Hero, la historia, la carta, el widget, la atmósfera, los testimonios y el footer. Es el único archivo HTML del proyecto.</td>
+            </tr>
+            <tr>
+                <td>README.md</td>
+                <td>La <strong>presentación del proyecto en GitHub</strong>. Es lo primero que ve cualquier visitante del repositorio. Explica qué es el sitio, cómo ejecutarlo localmente, la tecnología usada y cómo contribuir.</td>
+            </tr>
+            <tr>
+                <td>CHANGELOG.md</td>
+                <td>El <strong>diario oficial de cambios</strong>. Documenta qué se agregó, corrigió o eliminó en cada versión (v1.0, v1.1, v1.2…). Sigue el estándar internacional "Keep a Changelog" con versionado semántico.</td>
+            </tr>
+            <tr>
+                <td>package.json</td>
+                <td>El <strong>pasaporte del proyecto</strong> en el ecosistema Node.js. Define el nombre, versión, autor y los comandos de desarrollo como <code>npm run dev</code> para levantar el sitio localmente en un clic.</td>
+            </tr>
+            <tr>
+                <td>LICENSE</td>
+                <td>El documento legal (licencia MIT) que declara que el código es de autoría propia y bajo qué condiciones otros desarrolladores pueden usarlo, modificarlo o distribuirlo.</td>
+            </tr>
+            <tr>
+                <td>.gitignore</td>
+                <td>La <strong>lista negra de Git</strong>. Le dice a Git qué archivos debe ignorar y nunca subir al repositorio: archivos temporales del sistema operativo, carpetas de dependencias (<code>node_modules/</code>), contraseñas de entorno (<code>.env</code>), etc.</td>
+            </tr>
+            <tr>
+                <td>.editorconfig</td>
+                <td>Archivo de configuración que asegura que el código siempre se escriba con el <strong>mismo estilo de sangría y formato</strong>, sin importar si usas VS Code, Cursor, WebStorm u otro editor. Evita conflictos en el historial de Git.</td>
+            </tr>
+            <tr>
+                <td>deploy.yml</td>
+                <td>El <strong>pipeline de CI/CD con GitHub Actions</strong>. Cada vez que se hace un push a la rama <code>main</code>, GitHub ejecuta este archivo automáticamente y publica el sitio actualizado en GitHub Pages sin intervención manual.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Layers -->
+    <h2>🏗️ Las 4 Capas del Proyecto</h2>
+    <div class="layers">
+        <div class="layer-card">
+            <span class="emoji">🏗️</span>
+            <h3>Estructura</h3>
+            <p>index.html define todo el contenido y orden visual</p>
+        </div>
+        <div class="layer-card">
+            <span class="emoji">🎨</span>
+            <h3>Diseño</h3>
+            <p>css/style.css controla colores, fuentes y layout</p>
+        </div>
+        <div class="layer-card">
+            <span class="emoji">⚙️</span>
+            <h3>Lógica</h3>
+            <p>js/main.js agrega interactividad y animaciones</p>
+        </div>
+        <div class="layer-card">
+            <span class="emoji">🖼️</span>
+            <h3>Recursos</h3>
+            <p>assets/ contiene imágenes y fotografías reales</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <strong>Uhlala Café</strong> · Macul Alto, Santiago de Chile · 
+        <a href="https://github.com/Baastian0922/UhlalaCafe" style="color:#b87870;">github.com/Baastian0922/UhlalaCafe</a>
+        <br>Documento generado el 11 de agosto de 2026 · v1.2.0
+    </div>
+
+</body>
+</html>
