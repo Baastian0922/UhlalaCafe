@@ -1,0 +1,40 @@
+{
+  "name": "uhlala-cafe",
+  "version": "1.2.0",
+  "description": "Landing page premium para Uhlala Café — café de especialidad, pastelería casera y terraza con vista a la ciudad en Macul Alto, Santiago.",
+  "author": "Baastian0922 <bmcrojas0922@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://baastian0922.github.io/UhlalaCafe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Baastian0922/UhlalaCafe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Baastian0922/UhlalaCafe/issues"
+  },
+  "keywords": [
+    "cafe",
+    "landing-page",
+    "html",
+    "css",
+    "vanilla-js",
+    "responsive",
+    "uhlala",
+    "macul",
+    "santiago"
+  ],
+  "scripts": {
+    "dev": "npx --yes http-server . -p 3000 -o --cors",
+    "serve": "npx --yes serve . -p 3000",
+    "lint:html": "npx --yes html-validate index.html",
+    "lint:css": "npx --yes stylelint \"css/**/*.css\"",
+    "format": "npx --yes prettier --write \"**/*.{html,css,js,md,json}\" --ignore-path .gitignore",
+    "validate": "npm run lint:html && npm run lint:css",
+    "deploy": "echo 'Deploy via GitHub Pages — push to main branch to trigger CI/CD'"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

@@ -6,14 +6,41 @@
 *.njsproj
 *.sln
 *.sw?
+*.DS_Store
 
 # OS metadata
-.DS_Store
 Thumbs.db
+ehthumbs.db
+desktop.ini
 
-# Temp/logs
+# Node modules (if ever added)
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.npm
+.yarn/cache
+.yarn/unplugged
+
+# Build output (if a bundler is ever added)
+dist/
+build/
+.parcel-cache/
+.cache/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temp/logs
 logs/
 *.log
+tmp/
+temp/
+
+# Coverage reports
+coverage/
+
+# Package lock (keep package-lock.json, ignore yarn.lock if not using yarn)
+yarn.lock
